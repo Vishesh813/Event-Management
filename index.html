@@ -1,0 +1,91 @@
+<html>
+    <head>
+     <style>
+     #eventForm{
+        text-align: center 
+         
+     }
+     #err1,#err2,#err3,#err4,#err5,#err6{
+         color:red;
+     }
+     </style>
+    </head>
+
+<body>
+
+    <center>
+            <div style="display:block;" id="creationDiv">
+                    <h1>Event Management System</h1><hr>
+                    
+                    <form id="createEvent">
+                            <h2>Event Creation Form</h2>
+                            <table align="center"  border="1px solid black" width="80%" bgcolor="#fe45e0" id="eventForm">
+                       <!------Event Id-->
+                             <tr>
+                                <td><label>Event Id</label></td>
+                                <td><input type="number" id="eventId" > <span id="err1"></span></td> 
+                             </tr>
+                            
+                             <!------Department-->
+                             <tr>
+                                    <td><label>Department</label></td>
+                                    <td>
+                                    <select id="department">
+                                       <option value="">default</option>
+                                       <option value="Admin">Admin</option>
+                                       <option value="HR" >HR</option>
+                                       <option value="Finance">Finance</option>
+                                       <option value="Network" >Network</option>
+                                    </select>
+                                    <span id="err2"></span>
+                                    </td> 
+                                    
+                             </tr>
+                             <!------Status-->
+                             <tr>
+                                    <td><label>Status</label></td>
+                                    <td>
+                                            <select id="status">
+                                               <option value="">default</option>
+                                               <option value="Open">Open</option>
+                                               <option value="In Progress" >In Progress</option>
+                                               <option value="Reject">Reject</option>
+                                               <option value="Complete" >Complete</option>
+                                            </select>
+                                            <span id="err3"></span>
+                                    </td> 
+                                    
+                             </tr>
+        
+                             <!----Description-->
+                             <tr>
+                                 <td><label>Description</label></td>
+                                 <td><input type="text" id="description" > <span id="err4"></span></td>
+                             </tr>
+                             
+                              <!----Raise By-->
+                               <tr>
+                                    <td><label>Raised By</label></td>
+                                    <td><textarea type="text" id="raisedBy" ></textarea></td>
+                                    <span id="err5"></span>
+                                </tr>
+                                
+                                <!----Contact-->
+                               <tr>
+                                    <td><label>Contact Phone</label></td>
+                                    <td><input type="text" id="contactPhone" ><span id="err6"></span> </td>
+                                </tr>
+                            </table>
+                            
+                    </form>
+                    <input type="submit" id="create"  onclick="validateCreation() " value="Create">
+                    <input id="reset"  type="reset" value="Cancel"> 
+                    
+                    <div id="resultDiv"></div>
+            </div>
+    </center>
+    
+<script src="app.js"></script>
+
+</body>
+</html>
